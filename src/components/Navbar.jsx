@@ -11,7 +11,7 @@ const Navbar = () => {
         </div>
 
         <div className="">
-          <span className="bg-white py-[6px] px-6 text-[14px] md:text-[16px] text-purple-900 rounded-[30px] shadow-md shadow-gray-900 transition duration-900 cursor-pointer hover:font-bold " onClick={logout}>
+          <span className="bg-white border border-yellow-600 py-[6px] px-6 text-[14px] md:text-[16px] text-yellow-600 rounded-[30px] transition duration-900 cursor-pointer hover:font-bold " onClick={logout}>
             logout
           </span>
         </div>

@@ -53,7 +53,6 @@ const ProductProvider = ({ children }) => {
     requestData.append("price", product.price);
     requestData.append("description", product.description);
     requestData.append("category", product.category);
-    requestData.append("subCategory", product.subCategory);
     // requestData.append("images", product.images);
     for (let i = 0; i < product.images.length; i++) {
       requestData.append('images', product.images[i]);
