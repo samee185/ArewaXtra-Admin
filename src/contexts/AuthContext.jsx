@@ -47,14 +47,32 @@ const AuthProvider = ({ children }) => {
         setLoading(false);
       });
   };
-  const logout = () => {
-    setToken(null);
-    setUser(null);
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    navigate("/");
+  const logout = async () => {
+    try {
+      const token = localStorage.getItem("token") || null;
+  
+      if (!token) {
+        throw new Error("No token available for logout");
+      }
+  
+      await axios.post(`${apiUrl}/auth/logout`, {}, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, 
+        },
+      });
+  
+      setToken(null);
+      setUser(null);
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      navigate("/");
+    } catch (error) {
+      console.error("Logout failed:", error.response?.data || error.message);
+      
+    }
   };
-
+  
   const values = {
     loading,
     token,
