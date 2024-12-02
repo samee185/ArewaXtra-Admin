@@ -12,7 +12,7 @@ const ProductTable = () => {
         <h1 className="text-xl font-bold mb-4">All Products List</h1>
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
-            <tr className="w-full bg-purple-300 text-left">
+            <tr className="w-full bg-yellow-50 text-left">
               <th className="py-2 px-4 border-b">Image</th>
               <th className="py-2 px-4 border-b">Title</th>
               <th className="py-2 px-4 border-b">Category</th>

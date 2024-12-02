@@ -15,41 +15,6 @@ import {
 
 const data = [
   {
-    name: "Jan",
-    uv: 2290,
-    pv: 1850,
-    amt: 2100,
-    cnt: 1240,
-  },
-  {
-    name: "Feb",
-    uv: 1268,
-    pv: 1067,
-    amt: 1506,
-    cnt: 690,
-  },
-  {
-    name: "Mar",
-    uv: 1397,
-    pv: 1098,
-    amt: 989,
-    cnt: 350,
-  },
-  {
-    name: "Apr",
-    uv: 1580,
-    pv: 1260,
-    amt: 1228,
-    cnt: 540,
-  },
-  {
-    name: "May",
-    uv: 1520,
-    pv: 1108,
-    amt: 1100,
-    cnt: 460,
-  },
-  {
     name: "Jun",
     uv: 1400,
     pv: 1080,
