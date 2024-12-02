@@ -39,6 +39,8 @@ const CreateProduct = () => {
     onSubmit: async (values) => {
       try {
         await createNewProduct(values);
+        resetForm(); 
+        setImagesPreview([]);
       } catch (error) {
         console.error("Failed to create product:", error);
       }
