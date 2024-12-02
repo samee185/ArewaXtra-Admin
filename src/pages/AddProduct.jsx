@@ -12,7 +12,7 @@ const AddProduct = () => {
         <div className="basis-1/6">
           <Sidebar />
         </div>
-        <div className="basis-5/6 mt-28">
+        <div className="basis-5/6 mt-28 h-[80vh] overflow-y-auto">
         <p className="text-2xl mb-2 font-bold text-center">Add Product</p>
         <div className="text-center mb-5">Fill the form below to add a new product</div>
           <CreateProduct />

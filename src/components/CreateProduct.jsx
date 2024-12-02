@@ -49,7 +49,7 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="w-full h-[80vh] overflow-y-auto">
+    <div className="w-full h-[80vh]">
       <form className="px-2" onSubmit={formik.handleSubmit}>
         <div className="flex items-center flex-wrap md:flex-nowrap">
           <div className="px-5">
@@ -57,7 +57,7 @@ const CreateProduct = () => {
               Title:
             </label>
             <input
-              className="border-2 border-purple-300 rounded-lg focus:outline-none w-[100%] p-2 px-8"
+              className="border-2 border-yellow-600 rounded-lg focus:outline-none w-[100%] p-2 px-8"
               type="text"
               name="title"
               value={formik.values.title}
@@ -74,7 +74,7 @@ const CreateProduct = () => {
               Price:
             </label>
             <input
-              className="border-2 border-purple-300 rounded-lg focus:outline-none w-[100%] p-2 px-8"
+              className="border-2 border-yellow-600 rounded-lg focus:outline-none w-[100%] p-2 px-8"
               type="number"
               name="price"
               value={formik.values.price}
@@ -93,7 +93,7 @@ const CreateProduct = () => {
               Category:
             </label>
             <input
-              className="border-2 border-purple-300 rounded-lg focus:outline-none w-[100%] p-2 px-8"
+              className="border-2 border-yellow-600 rounded-lg focus:outline-none w-[100%] p-2 px-8"
               type="text"
               name="category"
               value={formik.values.category}
@@ -110,7 +110,7 @@ const CreateProduct = () => {
               Sub-Category:
             </label>
             <input
-              className="border-2 border-purple-300 rounded-lg focus:outline-none w-[100%] p-2 px-8"
+              className="border-2 border-yellow-600 rounded-lg focus:outline-none w-[100%] p-2 px-8"
               type="text"
               name="subCategory"
               value={formik.values.subCategory}
@@ -127,7 +127,7 @@ const CreateProduct = () => {
           <label className="block text-xl text-black font-semibold">
             Description:
             <textarea
-              className="border-2 border-purple-300 rounded-lg focus:outline-none w-[100%] p-2"
+              className="border-2 border-yellow-600 rounded-lg focus:outline-none w-[100%] p-2"
               name="description"
               value={formik.values.description}
               onChange={formik.handleChange}
@@ -143,7 +143,7 @@ const CreateProduct = () => {
           <label className="block text-xl text-black font-semibold">
             Images:
             <input
-              className="border-2 border-purple-300 rounded-lg focus:outline-none w-[100%] p-2 mt-2"
+              className="border-2 border-yellow-600 rounded-lg focus:outline-none w-[100%] p-2 mt-2"
               type="file"
               name="images"
               multiple
@@ -172,7 +172,7 @@ const CreateProduct = () => {
         <div className="p-5">
           <button
             type="submit"
-            className="bg-purple-800 text-white p-3 rounded-lg hover:bg-white hover:text-purple-800 hover:border-2 hover:border-purple-800 transition duration-1000"
+            className="bg-yellow-600 p-3 rounded-lg hover:bg-white hover:text-yellow-600 hover:border-2 hover:border-yellow-600 transition duration-1000"
             disabled={loading}
           >
             {loading ? <Spinner /> : "Create Product" }
