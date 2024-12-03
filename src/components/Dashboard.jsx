@@ -3,6 +3,7 @@ import DashboardCard from './DashboardCard'
 import { UserIcon, ClipboardDocumentCheckIcon,  BuildingStorefrontIcon } from "@heroicons/react/24/outline";
 import Charts from './Charts';
 import UserTable from './UserTable';
+import { useAuth } from '../contexts/AuthContext';
 const Dashboard = () => {
   const todayDate = new Date()
   const formattedDate = todayDate.toLocaleDateString()
@@ -13,7 +14,7 @@ const Dashboard = () => {
           <DashboardCard
             title={"Users"}
             cardImg={<UserIcon className="h-9 w-9 text-[#eeb100]" />}
-            amount={"1"}
+            amount={"3"}
             cardDate={formattedDate}
           />
           <DashboardCard
@@ -34,7 +35,7 @@ const Dashboard = () => {
           />
         </div>
         <div className="bg-gray-100 flex flex-wrap lg:flex-nowrap justify-between rounded-md">
-          <div className="p-2 w-full basis-1/2">
+          <div className="p-2 w-full md:basis-1/2 hidden lg:block">
             <h1 className="text-3xl text-center mb-4">
               Revenue <span className='text-[#eeb100]'>Indices</span>
             </h1>
