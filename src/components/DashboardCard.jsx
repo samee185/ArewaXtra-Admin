@@ -1,7 +1,7 @@
 const DashboardCard = ({ cardImg, title, cardDate, amount }) => {
   return (
     <>
-      <div className="bg-white w-full md:w-1/2 lg:w-[300px] p-3 shadow-sm shadow-gray-400 rounded-2xl">
+      <div className="bg-white w-full lg:w-[300px] p-3 shadow-sm shadow-gray-400 rounded-2xl">
         <div className="flex items-center gap-4 md:gap-6 lg:gap-8 ">
           <div>
             <div className="flex-shrink-0 ">{cardImg}</div>
