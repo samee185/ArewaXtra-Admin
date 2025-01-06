@@ -34,7 +34,7 @@ const Dashboard = () => {
             cardDate={formattedDate}
           />
         </div>
-        <div className="bg-gray-100 flex flex-wrap lg:flex-nowrap justify-between rounded-md">
+        <div className="">
           <div className="p-2 w-full md:basis-1/2 hidden lg:block">
             <h1 className="text-3xl text-center mb-4">
               Revenue <span className='text-[#eeb100]'>Indices</span>
