@@ -37,7 +37,7 @@ const Dashboard = () => {
         <div className="">
           <div className="p-2 w-full md:basis-1/2 hidden lg:block">
             <h1 className="text-3xl text-center mb-4">
-              Revenue <span className='text-[#eeb100]'>Indices</span>
+              Revenue <span className='text-yellow-600'>Indices</span>
             </h1>
             <Charts />
           </div>
