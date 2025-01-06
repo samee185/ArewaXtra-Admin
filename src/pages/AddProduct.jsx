@@ -24,7 +24,7 @@ const AddProduct = () => {
             <p className="text-gray-500 text-center mb-6">
               Fill the form below to add a new product
             </p>
-            <div className="h-[60vh] lg:h-[70vh]  overflow-y-auto">
+            <div className="h-[60vh]  overflow-y-auto">
             <CreateProduct />
             </div>
           </div>
