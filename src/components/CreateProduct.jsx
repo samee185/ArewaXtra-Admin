@@ -36,11 +36,12 @@ const CreateProduct = () => {
         .max(6, "You can only upload up to 6 images")
         .required("Images are required"),
     }),
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
-        await createNewProduct(values);
-        formik.resetForm();
-        setImagesPreview([]);
+        await createNewProduct(values); 
+        resetForm(); 
+        setImagesPreview([]); 
+
       } catch (error) {
         console.error("Failed to create product:", error);
       }
@@ -97,20 +98,20 @@ const CreateProduct = () => {
           <div>
             <label className="block font-semibold mb-2">Category:</label>
             <select
-  name="category"
-  value={formik.values.category}
-  onChange={formik.handleChange}
-  onBlur={formik.handleBlur}
-  className="w-full border rounded-lg p-3 focus:outline-none focus:ring focus:ring-yellow-400 bg-white"
->
-  <option value="" disabled>
-    Select a category
-  </option>
-  <option value="men">Men</option>
-  <option value="women">Women</option>
-  <option value="fragrance">Fragrance</option>
-  <option value="body spray">Body Spray</option>
-</select>
+              name="category"
+              value={formik.values.category}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              className="w-full border rounded-lg p-3 focus:outline-none focus:ring focus:ring-yellow-400 bg-white"
+            >
+              <option value="" disabled>
+                Select a category
+              </option>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+              <option value="fragrance">Fragrance</option>
+              <option value="body spray">Body Spray</option>
+            </select>
 
             {formik.touched.category && formik.errors.category && (
               <p className="text-red-500 text-sm">{formik.errors.category}</p>
