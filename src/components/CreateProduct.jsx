@@ -96,15 +96,22 @@ const CreateProduct = () => {
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label className="block font-semibold mb-2">Category:</label>
-            <input
-              type="text"
-              name="category"
-              placeholder="Enter product category"
-              value={formik.values.category}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              className="w-full border rounded-lg p-3 focus:outline-none focus:ring focus:ring-yellow-400"
-            />
+            <select
+  name="category"
+  value={formik.values.category}
+  onChange={formik.handleChange}
+  onBlur={formik.handleBlur}
+  className="w-full border rounded-lg p-3 focus:outline-none focus:ring focus:ring-yellow-400 bg-white"
+>
+  <option value="" disabled>
+    Select a category
+  </option>
+  <option value="men">Men</option>
+  <option value="women">Women</option>
+  <option value="fragrance">Fragrance</option>
+  <option value="body spray">Body Spray</option>
+</select>
+
             {formik.touched.category && formik.errors.category && (
               <p className="text-red-500 text-sm">{formik.errors.category}</p>
             )}
