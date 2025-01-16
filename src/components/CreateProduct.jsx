@@ -32,7 +32,7 @@ const CreateProduct = () => {
       category: Yup.string().required("Category is required"),
       subCategory: Yup.string(),
       images: Yup.array()
-        .min(2, "You need to upload at least 2 images")
+        .min(1, "You need to upload at least one image")
         .max(6, "You can only upload up to 6 images")
         .required("Images are required"),
     }),
